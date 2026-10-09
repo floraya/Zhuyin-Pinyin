@@ -20,15 +20,17 @@ export function getLevelFromExp(exp: number): { level: number; title: string; cu
     { lvl: 2, exp: 60, title: '聲母學徒' },
     { lvl: 3, exp: 140, title: '舌尖御風者' },
     { lvl: 4, exp: 240, title: '音韻探險家' },
-    { lvl: 5, exp: 360, title: '拼音大師' },
-    { lvl: 6, exp: 500, title: '盲打鍵盤手' },
-    { lvl: 7, exp: 680, title: '除陷達人' },
-    { lvl: 8, exp: 900, title: '拼音宗師' },
+    { lvl: 5, exp: 380, title: '平捲辨析師' },
+    { lvl: 6, exp: 550, title: '盲打鍵盤手' },
+    { lvl: 7, exp: 760, title: '除陷達人' },
+    { lvl: 8, exp: 1050, title: '拼音大師' },
+    { lvl: 9, exp: 1400, title: '簡拼宗師' },
+    { lvl: 10, exp: 1800, title: '拼音至尊' },
   ];
 
   for (let i = levels.length - 1; i >= 0; i--) {
     if (exp >= levels[i].exp) {
-      const nextExp = levels[i + 1] ? levels[i + 1].exp : levels[i].exp + 300;
+      const nextExp = levels[i + 1] ? levels[i + 1].exp : levels[i].exp + 400;
       return {
         level: levels[i].lvl,
         title: levels[i].title,

@@ -93,7 +93,7 @@ export const AchievementsModal: React.FC<AchievementsModalProps> = ({
             <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
               <span className="text-xs text-slate-500 block mb-0.5">通關關卡</span>
               <strong className="text-lg font-bold text-slate-900 tabular-nums">
-                {completedStagesCount} / 8
+                {completedStagesCount} / 15
               </strong>
             </div>
             <div className="p-3.5 bg-slate-50 rounded-xl border border-slate-200">

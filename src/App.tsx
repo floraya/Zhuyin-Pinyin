@@ -141,12 +141,12 @@ export default function App() {
               <div className="hidden lg:flex absolute right-8 bottom-8 flex-col gap-2.5 text-xs text-indigo-200 bg-white/10 p-5 rounded-2xl backdrop-blur-sm border border-white/10">
                 <div className="flex items-center justify-between gap-6">
                   <span>通關進度:</span>
-                  <strong className="text-white font-bold tabular-nums">{completedStages} / 8 關</strong>
+                  <strong className="text-white font-bold tabular-nums">{completedStages} / 15 關</strong>
                 </div>
                 <div className="flex items-center justify-between gap-6">
                   <span>累積星級:</span>
                   <span className="flex items-center gap-1 text-amber-300 font-bold tabular-nums">
-                    <Star className="w-3.5 h-3.5 fill-amber-300" /> {totalStars} / 24
+                    <Star className="w-3.5 h-3.5 fill-amber-300" /> {totalStars} / 45
                   </span>
                 </div>
                 <div className="flex items-center justify-between gap-6">
@@ -161,17 +161,17 @@ export default function App() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3">
                 <div>
                   <h2 className="text-lg font-bold text-slate-900">
-                    關卡闖關地圖 (8 大主題階梯)
+                    關卡闖關地圖 (15 大進階階梯 · 漸進挑戰)
                   </h2>
                   <p className="text-xs text-slate-500">
-                    由淺入深，逐步突破聲母、韻母、平捲舌與縮寫大魔王陷阱
+                    由淺入深：基礎聲母 ➔ 平捲舌對抗 ➔ j/q/x 突破 ➔ 鼻音分水嶺 ➔ 縮寫陷阱 ➔ 簡拼成語 ➔ 至尊考核
                   </p>
                 </div>
 
                 <div className="flex items-center gap-4 text-xs text-slate-500">
                   <span className="flex items-center gap-1.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                    <span>已完成 {completedStages} 關</span>
+                    <span>已完成 {completedStages} / 15 關</span>
                   </span>
                   <span aria-hidden="true" className="text-slate-300">·</span>
                   <span className="flex items-center gap-1.5 text-amber-600 font-medium">

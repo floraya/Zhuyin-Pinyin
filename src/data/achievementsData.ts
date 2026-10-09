@@ -24,39 +24,53 @@ export const ACHIEVEMENTS: Achievement[] = [
   },
   {
     id: 'retroflex-master',
-    name: '平捲舌征服者',
-    description: '成功攻克第二關「舌尖與捲舌對決」！',
+    name: '平捲舌辨析師',
+    description: '成功攻克第四關「平捲舌極限瞬發對抗」！',
     icon: '🎯',
-    condition: (stats) => !!stats.stageProgress[2]?.completed,
+    condition: (stats) => !!stats.stageProgress[4]?.completed,
   },
   {
     id: 'jqx-breaker',
     name: 'JQX 破壁者',
-    description: '成功攻破第三關，熟練掌握 ㄐ=j、ㄑ=q、ㄒ=x！',
+    description: '成功攻破第五關，熟練掌握 ㄐ=j、ㄑ=q、ㄒ=x！',
     icon: '🗝️',
-    condition: (stats) => !!stats.stageProgress[3]?.completed,
+    condition: (stats) => !!stats.stageProgress[5]?.completed,
+  },
+  {
+    id: 'nasal-expert',
+    name: '前後鼻音天秤',
+    description: '成功攻克第八關，精準區分 -n 與 -ng！',
+    icon: '⚖️',
+    condition: (stats) => !!stats.stageProgress[8]?.completed,
+  },
+  {
+    id: 'dots-master',
+    name: '除點幻術師',
+    description: '通關第十一關，徹底搞懂 ü 在 jqx 脫帽與 nv/lv 打 v 的規則！',
+    icon: '🎩',
+    condition: (stats) => !!stats.stageProgress[11]?.completed,
   },
   {
     id: 'trap-defier',
     name: '大魔王除陷大師',
-    description: '通關第六關，徹底攻克 ju/qu/xu、-ian、-ong、-iu 等台灣人常見陷阱！',
+    description: '通關第十二關，擊破 -ian、-ong、-iu、-ui、-un 所有陷阱！',
     icon: '🛡️',
-    condition: (stats) => !!stats.stageProgress[6]?.completed,
+    condition: (stats) => !!stats.stageProgress[12]?.completed,
   },
   {
-    id: 'exp-300',
-    name: '拼音熟手',
-    description: '累積獲得超過 300 EXP！',
-    icon: '⭐',
-    condition: (stats) => stats.exp >= 300,
+    id: 'idiom-master',
+    name: '簡拼成語大師',
+    description: '通關第十四關，熟練掌握四字成語首字母簡拼思維！',
+    icon: '⚡',
+    condition: (stats) => !!stats.stageProgress[14]?.completed,
   },
   {
     id: 'grandmaster',
-    name: '拼音宗師',
-    description: '完成全部 8 個關卡，榮膺拼音宗師頭銜！',
+    name: '拼音至尊王者',
+    description: '全數攻克 15 個進階關卡，榮登拼音至尊殿堂！',
     icon: '👑',
     condition: (stats) => {
-      for (let i = 1; i <= 8; i++) {
+      for (let i = 1; i <= 15; i++) {
         if (!stats.stageProgress[i]?.completed) return false;
       }
       return true;

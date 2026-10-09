@@ -24,9 +24,25 @@ export const QuizModal: React.FC<QuizModalProps> = ({
   const [streak, setStreak] = useState(0);
   const [maxStreak, setMaxStreak] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [shuffledOptions, setShuffledOptions] = useState<string[]>([]);
 
   const currentQ: QuizQuestion = stage.questions[currentIndex];
   const totalQuestions = stage.questions.length;
+
+  // Shuffle options on each question
+  useEffect(() => {
+    if (currentQ?.options && currentQ.options.length > 0) {
+      const arr = [...currentQ.options];
+      // Fisher-Yates shuffle
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      setShuffledOptions(arr);
+    } else {
+      setShuffledOptions([]);
+    }
+  }, [currentIndex, currentQ]);
 
   // Auto pronounce audio if sound enabled when question loads
   useEffect(() => {
@@ -180,7 +196,7 @@ export const QuizModal: React.FC<QuizModalProps> = ({
 
               {/* Options Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                {currentQ.options?.map((option, idx) => {
+                {shuffledOptions.map((option, idx) => {
                   const isSelected = selectedAnswer === option;
                   const isCorrect = option === currentQ.correctAnswer;
                   let btnStyle = 'bg-white border-slate-200 text-slate-800 hover:border-indigo-400 hover:bg-indigo-50/30';
