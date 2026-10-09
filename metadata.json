@@ -1,0 +1,6 @@
+{
+  "name": "注音轉拼音大作戰 - 漢語拼音輸入法遊戲化闖關",
+  "description": "專為習慣注音的學習者打造的漢語拼音闖關教學！完整收錄注音拼音對照表、大魔王陷阱解析、互動打字與積分挑戰，助你無痛切換拼音輸入法。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
