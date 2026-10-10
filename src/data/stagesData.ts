@@ -136,21 +136,23 @@ export const STAGES: Stage[] = [
       {
         id: 's2-q4',
         type: 'single-choice',
-        prompt: '想要打出「草莓」(ㄘㄠˇ ㄇㄟˊ)，第一個字「草」的聲母是什麼？',
-        targetZhuyin: 'ㄘㄠˇ',
+        prompt: '想要打出「草莓」(ㄘㄠˇ ㄇㄟˊ)，第一個字「草」開頭的【聲母 (ㄘ)】是什麼？',
+        subPrompt: '💡 溫馨提醒：本題問的是開頭的「聲母」，不是整個字的完整拼音 (cao) 喔！',
+        targetZhuyin: '聲母：ㄘ (草 ㄘㄠˇ)',
         options: ['ch', 'ts', 'c', 'k'],
         correctAnswer: 'c',
-        explanation: '「草」注音是 ㄘㄠˇ，ㄘ對應 c，ㄠ對應 ao，所以拼音是 cao！',
+        explanation: '「草」(ㄘㄠˇ) 的拼音組成：\n• 聲母（開頭音）：ㄘ ➔ c\n• 韻母（後半音）：ㄠ ➔ ao\n• 完整拼音：c + ao = cao\n因為題目問的是開頭的「聲母」，所以答案是 c！',
         audioText: '草莓'
       },
       {
         id: 's2-q5',
         type: 'single-choice',
-        prompt: '詞彙「彩色」(ㄘㄞˇ ㄙㄜˋ) 的兩個聲母分別是？',
-        targetZhuyin: 'ㄘㄞˇ ㄙㄜˋ',
+        prompt: '詞彙「彩色」(ㄘㄞˇ ㄙㄜˋ) 開頭的兩個【聲母】分別是？',
+        subPrompt: '💡 完整拼音是 caise，此題問的是開頭聲母 (ㄘ 與 ㄙ)',
+        targetZhuyin: '聲母：ㄘ 與 ㄙ (彩色)',
         options: ['ch 與 sh', 'c 與 s', 'ts 與 s', 'c 與 sh'],
         correctAnswer: 'c 與 s',
-        explanation: '彩(ㄘ)=c，色(ㄙ)=s，所以聲母是 c 與 s！拼音為 caise。',
+        explanation: '彩色 (caise) 的組成：\n• 彩(ㄘㄞˇ)：聲母是 ㄘ (c)，韻母是 ai\n• 色(ㄙㄜˋ)：聲母是 ㄙ (s)，韻母是 e\n因此兩字的聲母分別是 c 與 s！',
         audioText: '彩色'
       },
       {
@@ -228,11 +230,12 @@ export const STAGES: Stage[] = [
       {
         id: 's3-q6',
         type: 'single-choice',
-        prompt: '「燃燒」(ㄖㄢˊ ㄕㄠ) 的兩個聲母分別是？',
-        targetZhuyin: 'ㄖㄢˊ ㄕㄠ',
+        prompt: '「燃燒」(ㄖㄢˊ ㄕㄠ) 開頭的兩個【聲母】在拼音中分別是？',
+        subPrompt: '💡 完整拼音是 ranshao，此題考開頭聲母 (ㄖ 與 ㄕ)',
+        targetZhuyin: '聲母：ㄖ 與 ㄕ (燃燒)',
         options: ['l 與 s', 'r 與 sh', 'r 與 s', 'j 與 sh'],
         correctAnswer: 'r 與 sh',
-        explanation: '燃(ㄖ)=r，燒(ㄕ)=sh，所以拼音是 ranshao！',
+        explanation: '燃燒 (ranshao) 的組成：\n• 燃(ㄖㄢˊ)：聲母是 ㄖ ➔ r，韻母是 an\n• 燒(ㄕㄠ)：聲母是 ㄕ ➔ sh，韻母是 ao\n所以兩字開頭聲母分別是 r 與 sh！',
         audioText: '燃燒'
       },
     ]
@@ -506,11 +509,12 @@ export const STAGES: Stage[] = [
       {
         id: 's7-q5',
         type: 'single-choice',
-        prompt: '「高頭大馬」中的「高」(ㄍㄠ) 與「頭」(ㄊㄡˊ) 韻母分別是？',
-        targetZhuyin: 'ㄍㄠ ㄊㄡˊ',
+        prompt: '「高頭大馬」中的「高」(ㄍㄠ) 與「頭」(ㄊㄡˊ) 後半段的【韻母】分別是？',
+        subPrompt: '💡 完整拼音是 gao 與 tou，此題考後半部韻母 (ㄠ 與 ㄡ)',
+        targetZhuyin: '韻母：ㄠ 與 ㄡ (高 ㄍㄠ、頭 ㄊㄡˊ)',
         options: ['ou 與 ao', 'ao 與 ou', 'ao 與 uo', 'au 與 ou'],
         correctAnswer: 'ao 與 ou',
-        explanation: '高(ㄍㄠ)=gao，頭(ㄊㄡˊ)=tou，韻母為 ao 與 ou。',
+        explanation: '拼音拆解：\n• 高(ㄍㄠ)：聲母 g + 韻母 ao = gao\n• 頭(ㄊㄡˊ)：聲母 t + 韻母 ou = tou\n所以兩字韻母分別是 ao 與 ou！',
         audioText: '高 頭'
       },
       {
